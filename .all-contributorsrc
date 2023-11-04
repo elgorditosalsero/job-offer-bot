@@ -1,0 +1,27 @@
+{
+  "projectName": "jd-post-bot",
+  "projectOwner": "elgorditosalsero",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "elgorditosalsero",
+      "name": "Guido Porcaro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65770455?v=4",
+      "profile": "https://github.com/elgorditosalsero",
+      "contributions": [
+        "code",
+        "doc",
+        "promotion"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true
+}
