@@ -1,0 +1,10 @@
+colors: true
+pre-commit:
+  commands:
+    eslint:
+      glob: "*.{ts}"
+      run: npx eslint {staged_files} && git add {staged_files}
+commit-msg:
+  scripts:
+    "commitlint.sh":
+      runner: bash
