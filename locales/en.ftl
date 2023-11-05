@@ -9,6 +9,7 @@ commands = Commands
     .postjoboffertogroups = Fill a new <strong>job offer</strong> to post, picking up a target group
     .language = Choose the language
     .settopic = Set the topic where the <strong>job offer</strong> will be posted
+    .excludefromcrossposting = Removes the group from the cross posting feature
 
 general = General
     .welcome = Welcome, are you ready to post your <strong>job offer</strong>?
@@ -28,6 +29,7 @@ general = General
     .commands = The available commands are:
             { $commands }
     .notApplicable = N/A
+    .excludeFromCrossPosting = Your group will not be listed anymore in the cross posting feature!
 
 help = Aiuto
     .private = Hi!
@@ -48,6 +50,8 @@ help = Aiuto
             If you want to change the language which your <strong>job offer</strong> will be posted, use <pre>/{ $languageCommand }</pre>
     
             If you want to set or change the topic where the <strong>job offer</strong> will be posted, use <pre>/{ $topicCommand }</pre>
+
+            If you want to remove your group from the cross posting feature, use <pre>/{ $exludeCommand }</pre?
 
 jobOffer = Job Offer
     .roleQuestion = What's the role?

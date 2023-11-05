@@ -1,6 +1,7 @@
 export * from "./bot-admin.js";
 export * from "./commands.js";
 export * from "./conversations/job-offer.js";
+export * from "./crossposting.js";
 export * from "./help.js";
 export * from "./job-offer.js";
 export * from "./language.js";

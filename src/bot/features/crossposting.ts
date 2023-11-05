@@ -1,10 +1,10 @@
 import { Composer } from "grammy";
 import type { Context } from "#root/bot/context.js";
 import {
+  excludeFromCrossPosting,
   getGroup,
   GROUP_COMMANDS,
   logHandle,
-  setTopic,
 } from "#root/bot/helpers/index.js";
 import { onlyAdmin } from "#root/bot/middlewares/index.js";
 
@@ -13,8 +13,8 @@ const composer = new Composer<Context>();
 const feature = composer.chatType(["supergroup", "group"]);
 
 feature.command(
-  GROUP_COMMANDS.SET_TOPIC,
-  logHandle("set-topic"),
+  GROUP_COMMANDS.EXCLUDE_FROM_CROSSPOSTING,
+  logHandle("exclude-from-crosspostihg"),
   onlyAdmin(),
   async (ctx) => {
     const {
@@ -26,9 +26,9 @@ feature.command(
 
     if (isBotInit) {
       try {
-        await setTopic(id, threadId);
+        await excludeFromCrossPosting(id);
 
-        return ctx.reply(ctx.t("general.setTopic"), {
+        return ctx.reply(ctx.t("general.excludeFromCrossPosting"), {
           message_thread_id: threadId,
         });
       } catch (error) {
@@ -45,4 +45,4 @@ feature.command(
   },
 );
 
-export { composer as setTopicFeature };
+export { composer as excludeFromCrossPostingFeature };

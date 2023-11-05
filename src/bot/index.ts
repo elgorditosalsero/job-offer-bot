@@ -10,6 +10,7 @@ import {
 import {
   botAdminFeature,
   commandsFeature,
+  excludeFromCrossPostingFeature,
   helpFeature,
   jobOfferConversation,
   languageFeature,
@@ -78,6 +79,7 @@ export function createBot(token: string, { config, sessionStorage }: Options) {
   // Handlers
   protectedBot.use(botAdminFeature);
   protectedBot.use(commandsFeature);
+  protectedBot.use(excludeFromCrossPostingFeature);
   protectedBot.use(helpFeature);
   protectedBot.use(postJobOfferFeature);
   protectedBot.use(setTopicFeature);
