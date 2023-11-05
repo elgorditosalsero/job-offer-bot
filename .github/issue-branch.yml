@@ -1,4 +1,4 @@
-branchName: ${issue.title[8],}
+branchName: ${issue.title}
 gitSafeReplacementChar: '-'
 branches:
     - label: bug
