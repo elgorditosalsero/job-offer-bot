@@ -3,7 +3,10 @@ import { DEFAULT_LOCALE, i18n } from "#root/bot/i18n.js";
 
 const BOT_ADMIN_COMMANDS = { SET_COMMANDS: "setcommands" } as const;
 
-const GROUP_COMMANDS = { SET_TOPIC: "settopic" } as const;
+const GROUP_COMMANDS = {
+  SET_TOPIC: "settopic",
+  EXCLUDE_FROM_CROSSPOSTING: "excludefromcrossposting",
+} as const;
 
 const PRIVATE_CHAT_COMMANDS = {
   CANCEL_POST_JOB_OFFER: "cancelpostjoboffer",

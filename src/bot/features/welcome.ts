@@ -6,7 +6,7 @@ import {
   insertGroup,
   SHARED_COMMANDS,
 } from "#root/bot/helpers/index.js";
-import { guard, isAdmin } from "grammy-guard";
+import { onlyAdmin } from "#root/bot/middlewares/index.js";
 
 const composer = new Composer<Context>();
 
@@ -37,12 +37,7 @@ privateFeature.command(
 groupFeature.command(
   SHARED_COMMANDS.START,
   logHandle("command-start-group"),
-  guard<Context>(isAdmin, (ctx) =>
-    ctx.reply(ctx.t("general.onlyAdmin"), {
-      message_thread_id: ctx.message?.message_thread_id,
-      reply_to_message_id: ctx.message?.message_id,
-    }),
-  ),
+  onlyAdmin(),
   async (ctx) => {
     const isGroupInDB = await getGroup(ctx.message.chat.id);
 

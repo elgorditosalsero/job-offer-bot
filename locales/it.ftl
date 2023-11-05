@@ -4,11 +4,12 @@ commands = Comandi
     .help = Mostra il messaggio per l'utilizzo del bot
     .start = Avvia il bot
     .setcommands = Inizializza i comandi del bot
-    .postjoboffer = Compila una nuova <strong>offerta di lavoro</strong> da postare con target l'ultimo gruppo dal quale hai aperto il bot
-    .cancelpostjoboffer = Annulla la compilazione dell'<strong>offerta di lavoro</strong> attuale
-    .postjoboffertogroups = Compila una nuova <strong>offerta di lavoro</strong> da postare scegliendo il gruppo di destinazione
+    .postjoboffer = Compila una nuova offerta di lavoro da postare con target l'ultimo gruppo dal quale hai aperto il bot
+    .cancelpostjoboffer = Annulla la compilazione dell'offerta di lavoro attuale
+    .postjoboffertogroups = Compila una nuova offerta di lavoro da postare scegliendo il gruppo di destinazione
     .language = Seleziona la lingua
-    .settopic = Seleziona il topic dove verranno postate le <strong>offerte di lavoro</strong>
+    .settopic = Seleziona il topic dove verranno postate le offerte di lavoro
+    .excludefromcrossposting = Rimuove il gruppo dalla funzionalità di cross posting
 
 errors = Errori
     .general = Contatta il creatore del bot
@@ -31,6 +32,7 @@ general = Generali
     .commands = I comandi disponibili sono:
         { $commands }
     .notApplicable = N/A
+    .excludeFromCrossPosting = Il tuo gruppo non comparirà più nella lista per fare cross posting!
 
 help = Aiuto
     .private = Ciao!
@@ -51,6 +53,8 @@ help = Aiuto
         Per selezionare la lingua con la quale verranno postate le offerte di lavoro, utilizza <pre>/{ $languageCommand }</pre>
 
         Per selezionare il topic dove verranno postate le offerte di lavoro, utilizza <pre>/{ $topicCommand }</pre>
+
+        Se vuoi rimuovere il gruppo dall funzionalità di cross posting, utilizza <pre>/{ $excludeCommand }</pre>
 
 jobOffer = Offerta di lavoro
     .roleQuestion = Qual è il ruolo?
@@ -74,7 +78,7 @@ jobOffer = Offerta di lavoro
     .benefits = BENEFITS
     .noBenefits = No benefits
     .linkQuestion = Qual è il link di questa <strong>offerta di lavoro</strong>?
-    .linkTextQuestion = Qual è il testo da mostare per il link?
+    .linkTextQuestion = Qual è il testo da mostrare per il link?
     .link = LINK
     .sentToGroup = La tua <strong>offerta di lavoro</strong> è stata postata con successo
     .sentToAllGroup = La tua <strong>offerta di lavoro</strong> è stata postata su tutti i gruppi con successo!

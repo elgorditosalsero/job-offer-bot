@@ -36,6 +36,7 @@ groupFeature.command(
         languageCommand: SHARED_COMMANDS.LANGUAGE,
         postCommand: SHARED_COMMANDS.POST_JOB_OFFER,
         topicCommand: GROUP_COMMANDS.SET_TOPIC,
+        excludeCommand: GROUP_COMMANDS.EXCLUDE_FROM_CROSSPOSTING,
       }),
       {
         message_thread_id: ctx.message.message_thread_id,

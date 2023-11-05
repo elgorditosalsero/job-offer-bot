@@ -21,6 +21,11 @@ const privateChatCommands = (localeCode: string) =>
     generateCommand(command, localeCode),
   );
 
+const groupCommands = (localeCode: string) =>
+  Object.values(GROUP_COMMANDS).map((command) =>
+    generateCommand(command, localeCode),
+  );
+
 function getLanguageCommand(localeCode: string = DEFAULT_LOCALE): BotCommand {
   return generateCommand(SHARED_COMMANDS.LANGUAGE, localeCode);
 }
@@ -40,10 +45,7 @@ function getPrivateChatAdminCommands(
 export function getGroupChatCommands(
   localeCode: string = DEFAULT_LOCALE,
 ): BotCommand[] {
-  return [
-    ...sharedCommands(localeCode),
-    generateCommand(GROUP_COMMANDS.SET_TOPIC, localeCode),
-  ];
+  return [...sharedCommands(localeCode), ...groupCommands(localeCode)];
 }
 
 export async function setCommandsHandler(ctx: CommandContext<Context>) {

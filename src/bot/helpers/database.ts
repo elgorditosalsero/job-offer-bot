@@ -20,7 +20,9 @@ export const getGroup = async (_id: Group["_id"]) => {
 export const getGroups = async () => {
   const databaseInstance = await database.getInstance();
 
-  const groupsInDatabase = databaseInstance.collection<Group>("groups").find();
+  const groupsInDatabase = databaseInstance
+    .collection<Group>("groups")
+    .find({ excludeFromCrossPosting: false });
 
   return groupsInDatabase.toArray();
 };
@@ -38,6 +40,7 @@ export const insertGroup = async ({
     groupName,
     language: language ?? DEFAULT_LOCALE,
     threadId,
+    excludeFromCrossPosting: false,
   });
 };
 
@@ -55,4 +58,15 @@ export const setGroupLanguage = async (_id: number, language: string) => {
   return databaseInstance
     .collection("groups")
     .updateOne({ _id: _id as unknown as ObjectId }, { $set: { language } });
+};
+
+export const excludeFromCrossPosting = async (_id: number) => {
+  const databaseInstance = await database.getInstance();
+
+  return databaseInstance
+    .collection("groups")
+    .updateOne(
+      { _id: _id as unknown as ObjectId },
+      { $set: { excludeFromCrossPosting: true } },
+    );
 };
