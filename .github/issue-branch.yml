@@ -1,0 +1,9 @@
+branchName: ${issue.title[8],}
+gitSafeReplacementChar: '-'
+branches:
+    - label: bug
+      prefix: bug/${assignee.login}/
+    - label: enhancement
+      prefix: feat/${assignee.login}/
+    - label: '*'
+      prefix: ${assignee.login}/
