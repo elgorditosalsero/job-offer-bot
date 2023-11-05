@@ -2,7 +2,6 @@ import { autoChatAction } from "@grammyjs/auto-chat-action";
 import { hydrate } from "@grammyjs/hydrate";
 import { hydrateReply, parseMode } from "@grammyjs/parse-mode";
 import { BotConfig, StorageAdapter, Bot as TelegramBot, session } from "grammy";
-import { onlyAdmin } from "grammy-middlewares";
 import {
   Context,
   SessionData,
@@ -81,24 +80,8 @@ export function createBot(token: string, { config, sessionStorage }: Options) {
   protectedBot.use(commandsFeature);
   protectedBot.use(helpFeature);
   protectedBot.use(postJobOfferFeature);
-  protectedBot.use(
-    onlyAdmin((ctx) =>
-      ctx.reply(ctx.t("general.onlyAdmin"), {
-        message_thread_id: ctx.message?.message_thread_id,
-        reply_to_message_id: ctx.message?.message_id,
-      }),
-    ),
-    setTopicFeature,
-  );
-  protectedBot.use(
-    onlyAdmin((ctx) =>
-      ctx.reply(ctx.t("general.onlyAdmin"), {
-        message_thread_id: ctx.message?.message_thread_id,
-        reply_to_message_id: ctx.message?.message_id,
-      }),
-    ),
-    welcomeFeature,
-  );
+  protectedBot.use(setTopicFeature);
+  protectedBot.use(welcomeFeature);
 
   if (isMultipleLocales) {
     protectedBot.use(languageFeature);

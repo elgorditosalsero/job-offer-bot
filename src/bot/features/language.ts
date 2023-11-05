@@ -12,6 +12,7 @@ import {
 } from "#root/bot/helpers/index.js";
 import { i18n } from "#root/bot/i18n.js";
 import { createChangeLanguageKeyboard } from "#root/bot/keyboards/index.js";
+import { guard, isAdmin } from "grammy-guard";
 
 const composer = new Composer<Context>();
 
@@ -49,6 +50,12 @@ feature.callbackQuery(
 groupFeature.command(
   SHARED_COMMANDS.LANGUAGE,
   logHandle("group-command-language"),
+  guard<Context>(isAdmin, (ctx) =>
+    ctx.reply(ctx.t("general.onlyAdmin"), {
+      message_thread_id: ctx.message?.message_thread_id,
+      reply_to_message_id: ctx.message?.message_id,
+    }),
+  ),
   async (ctx) => {
     const group = await getGroup(ctx.message.chat.id);
 

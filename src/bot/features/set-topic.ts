@@ -1,6 +1,6 @@
 import { Composer } from "grammy";
 import type { Context } from "#root/bot/context.js";
-import { isAdmin } from "grammy-guard";
+import { guard, isAdmin } from "grammy-guard";
 import {
   getGroup,
   GROUP_COMMANDS,
@@ -10,11 +10,17 @@ import {
 
 const composer = new Composer<Context>();
 
-const feature = composer.chatType(["supergroup", "group"]).filter(isAdmin);
+const feature = composer.chatType(["supergroup", "group"]);
 
 feature.command(
   GROUP_COMMANDS.SET_TOPIC,
   logHandle("set-topic"),
+  guard<Context>(isAdmin, (ctx) =>
+    ctx.reply(ctx.t("general.onlyAdmin"), {
+      message_thread_id: ctx.message?.message_thread_id,
+      reply_to_message_id: ctx.message?.message_id,
+    }),
+  ),
   async (ctx) => {
     const {
       chat: { id },

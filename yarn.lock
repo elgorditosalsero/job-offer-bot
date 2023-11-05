@@ -422,13 +422,6 @@
   resolved "https://registry.yarnpkg.com/@grammyjs/parse-mode/-/parse-mode-1.8.1.tgz#8519bce602cced3ce58daf1c843189bfe40c5a7a"
   integrity sha512-L/tRwQd2rm5Bniglea+fdWp9VX9nNNNLTwQFVCgkUUtPDMkneAVRBnX62r9YHmf0cPvA74+Xtn0v2ojOdLG9ng==
 
-"@grammyjs/runner@^1":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@grammyjs/runner/-/runner-1.0.4.tgz#b305c2cac02bd86ff8ef2116446af9faa8d95d72"
-  integrity sha512-77IE+2Gg0UHa9MNZ8wsculxJpzUDcHTrMg7OLbKoQ8jWKFxX78sdxRBwL+FK3NvHZ15YnXsnxesV43xgbOhteA==
-  dependencies:
-    abort-controller "^3.0.0"
-
 "@grammyjs/storage-mongodb@^2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@grammyjs/storage-mongodb/-/storage-mongodb-2.4.0.tgz#2d132bc07425f80c50d31be346f02a231d04692d"
@@ -1324,13 +1317,6 @@ enhanced-resolve@^5.12.0:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"
 
-envalid@^7:
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/envalid/-/envalid-7.3.1.tgz#5bf6bbb4effab2d64a1991d8078b4ae38924f0d2"
-  integrity sha512-KL1YRwn8WcoF/Ty7t+yLLtZol01xr9ZJMTjzoGRM8NaSU+nQQjSWOQKKJhJP2P57bpdakJ9jbxqQX4fGTOicZg==
-  dependencies:
-    tslib "2.3.1"
-
 error-ex@^1.3.1:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/error-ex/-/error-ex-1.3.2.tgz#b4ac40648107fdcdcfae242f428bea8a14d4f1bf"
@@ -2076,23 +2062,14 @@ graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
-grammy-guard@0.5.0:
+grammy-guard@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/grammy-guard/-/grammy-guard-0.5.0.tgz#de2cb448f627fb9861648354f604ad6406aad475"
   integrity sha512-vGqrEJPpm5XnaTkklkb/luLdo+qNZX78Fr9CwLdPFEUymYByqlxU/h+NKEmzsNHzC9lc+rS8oR+xQo1Wo5Ogxg==
   dependencies:
     callback-data "^1.0.0"
 
-grammy-middlewares@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/grammy-middlewares/-/grammy-middlewares-1.0.11.tgz#2877328c618a66025897f38f20306a01e790ee22"
-  integrity sha512-XASAQK25YOHoLKV0G1UEBH07oSc0nFIMltntyBV1BI5C2sEYKfcYkOp0xGt+SFT5EvLAbIHnyOy+riBnARKfhQ==
-  dependencies:
-    "@grammyjs/runner" "^1"
-    envalid "^7"
-    grammy "^1"
-
-grammy@1.19.2, grammy@^1:
+grammy@1.19.2:
   version "1.19.2"
   resolved "https://registry.yarnpkg.com/grammy/-/grammy-1.19.2.tgz#9cf960f2191acc2e0dd4d6360df864b29f2b0126"
   integrity sha512-bvDWesJgLn65MOsWhShVTVG1bSnh6Yo3OtUwoFzTG21CdPt6r8nzPWcuBSzxMDUQyv8I1c0TXH7zIxXFxiH4sw==
@@ -3969,11 +3946,6 @@ tsconfig-paths@^3.14.2:
     json5 "^1.0.2"
     minimist "^1.2.6"
     strip-bom "^3.0.0"
-
-tslib@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
-  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 tslib@^1.9.0:
   version "1.14.1"

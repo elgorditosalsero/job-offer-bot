@@ -6,12 +6,12 @@ import {
   insertGroup,
   SHARED_COMMANDS,
 } from "#root/bot/helpers/index.js";
-import { isAdmin } from "grammy-guard";
+import { guard, isAdmin } from "grammy-guard";
 
 const composer = new Composer<Context>();
 
 const privateFeature = composer.chatType("private");
-const groupFeature = composer.chatType(["supergroup", "group"]).filter(isAdmin);
+const groupFeature = composer.chatType(["supergroup", "group"]);
 
 privateFeature.command(
   SHARED_COMMANDS.START,
@@ -37,6 +37,12 @@ privateFeature.command(
 groupFeature.command(
   SHARED_COMMANDS.START,
   logHandle("command-start-group"),
+  guard<Context>(isAdmin, (ctx) =>
+    ctx.reply(ctx.t("general.onlyAdmin"), {
+      message_thread_id: ctx.message?.message_thread_id,
+      reply_to_message_id: ctx.message?.message_id,
+    }),
+  ),
   async (ctx) => {
     const isGroupInDB = await getGroup(ctx.message.chat.id);
 
