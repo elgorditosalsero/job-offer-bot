@@ -4,11 +4,11 @@ commands = Commands
     .help = Show the message to how to use the bot
     .start = Launch the bot
     .setcommands = Update bot's commands
-    .postjoboffer = Fill a new <strong>job offer</strong> to be post with the last group you have opened the bot with
-    .cancelpostjoboffer = Discard the entries about the latest <strong>job offer</strong>
-    .postjoboffertogroups = Fill a new <strong>job offer</strong> to post, picking up a target group
+    .postjoboffer = Fill a new job offer to be post with the last group you have opened the bot with
+    .cancelpostjoboffer = Discard the entries about the latest job offer
+    .postjoboffertogroups = Fill a new job offer to post, picking up a target group
     .language = Choose the language
-    .settopic = Set the topic where the <strong>job offer</strong> will be posted
+    .settopic = Set the topic where the job offer will be posted
     .excludefromcrossposting = Removes the group from the cross posting feature
 
 general = General
