@@ -76,6 +76,12 @@ export function createBot(token: string, { config, sessionStorage }: Options) {
   );
   protectedBot.use(createConversation(jobOfferConversation));
 
+  bot
+    .on("chat_member")
+    .filter((ctx) => ctx.chatMember.old_chat_member.status === "left")
+    .filter((ctx) => ctx.chatMember.new_chat_member.status === "member")
+    .use((ctx) => ctx.conversation.enter("jobOfferConversation"));
+
   // Handlers
   protectedBot.use(botAdminFeature);
   protectedBot.use(commandsFeature);
