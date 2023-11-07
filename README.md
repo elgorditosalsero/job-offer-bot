@@ -1,6 +1,6 @@
 # Job Offer Bot
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 `Job Offer Bot` allows you to post your job offers via simple and intuitive messages via Telegram.
@@ -79,7 +79,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/elgorditosalsero"><img src="https://avatars.githubusercontent.com/u/65770455?v=4?s=100" width="100px;" alt="Guido Porcaro"/><br /><sub><b>Guido Porcaro</b></sub></a><br /><a href="https://github.com/elgorditosalsero/jd-post-bot/commits?author=elgorditosalsero" title="Code">💻</a> <a href="https://github.com/elgorditosalsero/jd-post-bot/commits?author=elgorditosalsero" title="Documentation">📖</a> <a href="#promotion-elgorditosalsero" title="Promotion">📣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/elgorditosalsero"><img src="https://avatars.githubusercontent.com/u/65770455?v=4?s=100" width="100px;" alt="Guido Porcaro"/><br /><sub><b>Guido Porcaro</b></sub></a><br /><a href="https://github.com/elgorditosalsero/job-offer-bot/commits?author=elgorditosalsero" title="Code">💻</a> <a href="https://github.com/elgorditosalsero/job-offer-bot/commits?author=elgorditosalsero" title="Documentation">📖</a> <a href="#promotion-elgorditosalsero" title="Promotion">📣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/scriptswhisper"><img src="https://avatars.githubusercontent.com/u/135032973?v=4?s=100" width="100px;" alt="scriptswhisper"/><br /><sub><b>scriptswhisper</b></sub></a><br /><a href="https://github.com/elgorditosalsero/job-offer-bot/commits?author=scriptswhisper" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
